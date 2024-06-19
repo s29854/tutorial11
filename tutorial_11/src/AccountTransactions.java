@@ -1,6 +1,8 @@
 public interface AccountTransactions {
     double checkBalance();
-    void makeTransaction();
-    void depositFunds();
+
+    void transfer(BankAccount toAccount, double amount) throws AccountOperationException;
+
+    void depositFunds(double amount) throws AccountOperationException;
 
 }
